@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "FocusWeb - Remove Webpage Distractions",
+    "version": "1.0.1",
+    "description": "Focus on specific elements of a webpage by dimming everything else -or- Remove distracting elements",
+    "icons": {
+      "128": "focusExt-FinalLogo.png"
+    },
+    "action": {
+      "default_popup": "index.html",
+      "default_icon": "focusExt-FinalLogo.png"
+    },
+    "permissions": ["activeTab", "scripting"],
+    "host_permissions": ["<all_urls>"],
+    "content_scripts": [{
+      "matches": ["<all_urls>"],
+      "js": ["/content-scripts/focus.js"],
+      "css": ["/content-scripts/focus.css"]
+    }],
+    "web_accessible_resources": [{
+      "resources": [
+        "content-scripts/*"
+      ],
+      "matches": ["<all_urls>"]
+    }]
+  }

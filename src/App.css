@@ -1,0 +1,394 @@
+#root {
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 12px;
+  min-width: 280px;
+  gap: 16px;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.app-logo {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.app-title-container {
+  flex: 1;
+  text-align: left;
+}
+
+.app-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1976d2;
+  margin: 0;
+  padding: 0;
+}
+
+.app-subtitle {
+  font-size: 12px;
+  color: #666;
+  margin: 4px 0 0 0;
+}
+
+.section {
+  padding: 16px;
+  background: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.focus-section {
+  border: 1px solid #2196f3;
+  border-radius: 8px;
+  gap: 0;
+}
+
+.remove-section {
+  border: 1px solid #f44336;
+  border-radius: 8px;
+}
+
+.mode-toggle {
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  background-color: #e0e0e0;
+  color: #333;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.mode-toggle:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.focus-toggle {
+  background-color: #e0e0e0;
+}
+
+.focus-toggle.active {
+  background-color: #2196f3;
+  color: white;
+}
+
+.remove-toggle.active {
+  background-color: #f44336;
+  color: white;
+}
+
+.mode-toggle:not(:disabled):hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.removal-controls {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+.undo-button {
+  background-color: #f5f5f5;
+  color: #333;
+  border: 1px solid #e0e0e0;
+  flex: 1;
+}
+
+.undo-button:not(:disabled):hover {
+  background-color: #ffffff;
+  color: #2196f3;
+  border-color: #2196f3;
+}
+
+.reset-button {
+  background-color: #f5f5f5;
+  color: #333;
+  border: 1px solid #e0e0e0;
+  flex: 1;
+}
+
+.reset-button:not(:disabled):hover {
+  background-color: #ffffff;
+  color: #f44336;
+  border-color: #f44336;
+}
+
+.opacity-control {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  padding: 0;
+  margin: 0;
+}
+
+.opacity-control.visible {
+  max-height: 80px;
+  opacity: 1;
+  padding-top: 12px;
+  margin-top: 4px;
+}
+
+.opacity-control label {
+  font-size: 12px;
+  color: #666;
+  transform: translateY(5px);
+  transition: transform 0.3s ease;
+}
+
+.opacity-control.visible label {
+  transform: translateY(0);
+}
+
+.opacity-slider {
+  width: 100%;
+  height: 4px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: #e0e0e0;
+  outline: none;
+  border-radius: 2px;
+}
+
+.opacity-slider:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.opacity-slider:not(:disabled)::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #2196f3;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.opacity-slider:not(:disabled)::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+}
+
+.opacity-value {
+  font-size: 12px;
+  color: #666;
+  min-width: 40px;
+  text-align: center;
+}
+
+.persistence-control {
+  margin-top: 8px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 12px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.persistence-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #666;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+
+.persistence-label.disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.persistence-label.disabled span {
+  color: #666;
+}
+
+.persistence-checkbox {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.persistence-checkbox:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.coming-soon-badge {
+  background-color: #2196f3;
+  color: white !important;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 10px;
+  margin-left: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.app-footer {
+  text-align: center;
+  font-size: 11px;
+  color: #666;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.premium-lock {
+  position: relative;
+  cursor: not-allowed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.premium-lock:hover {
+  transform: scale(1.02);
+}
+
+.premium-lock:hover::before {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.premium-lock::before {
+  content: '🔒';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  z-index: 10;
+  pointer-events: none;
+  transition: transform 0.2s ease;
+}
+
+.premium-lock::after {
+  content: attr(data-premium-tooltip);
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 12px;
+  background-color: #333;
+  color: white;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  z-index: 1000;
+}
+
+.premium-lock:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.premium-feature {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.premium-feature.locked {
+  filter: blur(1px);
+  pointer-events: none;
+  user-select: none;
+}
+
+.premium-badge {
+  background-color: #ffd700;
+  color: #333;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 10px;
+  margin-left: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+/* Add specific styles for the darkness control lock */
+.opacity-control .premium-lock::before {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.opacity-control.visible .premium-lock::before {
+  opacity: 1;
+}

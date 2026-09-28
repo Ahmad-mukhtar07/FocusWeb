@@ -1,0 +1,43 @@
+/* Initial focus mode styles */
+.focus-hover {
+    outline: 2px solid #2196f3 !important;
+    outline-offset: 2px !important;
+    cursor: pointer !important;
+    position: relative !important;
+    z-index: 2147483646 !important;
+    transition: outline 0.2s ease !important;
+}
+
+/* Focused element styles */
+.focus-element {
+    position: relative !important;
+    z-index: 2147483646 !important;
+    outline: 2px solid #2196F3 !important;
+    outline-offset: 2px !important;
+    box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.3) !important;
+    cursor: default !important;
+    transition: all 0.3s ease !important;
+}
+
+/* Ensure the focused element and its children remain interactive */
+.focus-element,
+.focus-element * {
+    pointer-events: auto !important;
+}
+
+.remove-hover {
+    outline: 2px solid #f44336 !important;
+    outline-offset: 2px !important;
+    cursor: pointer !important;
+    position: relative !important;
+    z-index: 2147483646 !important;
+    transition: outline 0.2s ease !important;
+}
+
+.removed-element {
+    visibility: hidden !important;
+    pointer-events: none !important;
+    position: relative !important;
+    z-index: 2147483646 !important;
+    display: none !important;
+}
