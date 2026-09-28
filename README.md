@@ -4,6 +4,8 @@
 
 > Manifest name: **FocusWeb – Remove Webpage Distractions**
 
+**[Install from the Chrome Web Store](https://chromewebstore.google.com/detail/focusweb-remove-webpage-d/ajofmidkmdjbkmpbmihpbekekigdjolb)**
+
 ---
 
 ## Why Focus Web?
@@ -104,14 +106,22 @@ The extension does not describe a remote analytics or sync service in this repos
 
 ---
 
-## Install from source
+## Installation
 
-### Requirements
+### Chrome Web Store
+
+The easiest way to install Focus Web is from the [Chrome Web Store listing](https://chromewebstore.google.com/detail/focusweb-remove-webpage-d/ajofmidkmdjbkmpbmihpbekekigdjolb). Click **Add to Chrome**, then pin the extension from the toolbar puzzle icon.
+
+### Install from source
+
+For local development or contributing, build and load the extension yourself.
+
+#### Requirements
 
 - [Node.js](https://nodejs.org/) (LTS recommended)
 - Google Chrome or a Chromium-based browser
 
-### Build
+#### Build
 
 ```bash
 npm install
@@ -120,7 +130,7 @@ npm run build
 
 The loadable extension is output to the **`build/`** folder.
 
-### Load in Chrome
+#### Load in Chrome
 
 1. Open `chrome://extensions`.
 2. Enable **Developer mode**.
